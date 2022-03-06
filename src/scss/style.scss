@@ -1,0 +1,59 @@
+// mixin
+@import "mixins/mixin.scss";
+
+// common
+@import "common/_reset";
+@import "common/variables";
+@import "common/badge";
+@import "common/_button";
+@import "common/card";
+
+// partials
+@import "partials/header";
+@import "partials/contents";
+@import "partials/footer";
+
+body.menu-open {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .nav {
+        right: 0;
+    }
+}
+
+.section__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0 $space-30;
+    max-width: 1280px;
+    padding: $space-80 $space-20;
+    margin: 0 auto;
+
+    @include tablet {
+        & {
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            header {
+                flex-basis: 55%;
+            }
+
+            picture {
+                flex-basis: 40%;
+            }
+        }
+    }
+}

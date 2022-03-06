@@ -1,0 +1,16 @@
+.badge {
+    min-width: 25px;
+    min-height: 25px;
+    padding: 0 $space-4;
+    line-height: 25px;
+    font-size: $font-xs;
+    text-align: center;
+    color: $sea;
+    background-color: $light-blue-200;
+    display: inline-block;
+    border-radius: $border-r-4;
+    -webkit-border-radius: $border-r-4;
+    -moz-border-radius: $border-r-4;
+    -ms-border-radius: $border-r-4;
+    -o-border-radius: $border-r-4;
+}

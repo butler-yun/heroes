@@ -1,0 +1,187 @@
+// contents
+.hero {
+    .hero__img {
+        margin-bottom: $space-24;
+    }
+
+    header {
+        .notice {
+            display: inline-block;
+            padding: $space-4 $space-10;
+            margin: $space-16 0;
+            background-color: $light-yellow;
+            font-size: $font-xs;
+            font-weight: $font-weight-bold;
+            border-radius: $border-r-4;
+            -webkit-border-radius: $border-r-4;
+            -moz-border-radius: $border-r-4;
+            -ms-border-radius: $border-r-4;
+            -o-border-radius: $border-r-4;
+        }
+
+        .btns {
+            display: flex;
+            gap: $space-10;
+        }
+    }
+
+    @include tablet {
+        .section__container {
+            .notice {
+                margin-top: 0;
+            }
+        }
+
+        picture {
+            padding: 0 $space-30;
+            margin-bottom: 0;
+        }
+
+        header {
+            padding: 0 $space-30;
+        }
+    }
+}
+
+// language
+.language {
+    text-align: center;
+    background-color: $light-yellow;
+
+    .language__logos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: $space-10 $space-12;
+        width: 100%;
+
+        .language__logo-img {
+            flex-basis: 45%;
+            margin: $space-32 0;
+
+            img {
+                width: auto;
+                height: 45px;
+            }
+
+            @include tablet {
+                flex-basis: 30%;
+            }
+
+            @include desktop {
+                flex-basis: 15%;
+            }
+        }
+    }
+}
+
+// product
+.product {
+    header {
+        order: 1;
+        margin-top: $space-16;
+    }
+
+    picture {
+        order: 0;
+    }
+
+    @include tablet {
+        .section__container {
+            header {
+                order: 0;
+            }
+
+            picture {
+                order: 1;
+            }
+        }
+    }
+}
+
+// contact
+.contact {
+    .section__container {
+        padding-top: 0;
+
+        header {
+            margin-top: $space-16;
+
+            .contact__lists {
+                margin-bottom: $space-24;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: $space-10;
+                    margin-bottom: $space-10;
+
+                    svg {
+                        width: 30px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// support
+.support {
+    background-color: $light-blue-100;
+    .section__container {
+        header {
+            flex-basis: 100%;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: $space-20;
+
+            .card {
+                flex-basis: 100%;
+            }
+
+            @include tablet {
+                .card {
+                    flex-basis: 40%;
+                }
+            }
+
+            @include desktop {
+                .card {
+                    flex-basis: 32%;
+                }
+            }
+
+            .btns {
+                display: flex;
+                flex-direction: column;
+                gap: $space-10;
+                margin-top: $space-26;
+
+                @include tablet {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+}
+
+// pricing
+.pricing {
+    background-color: $light-yellow;
+    .section__container {
+        align-items: flex-start;
+        text-align: center;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

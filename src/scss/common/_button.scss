@@ -1,0 +1,47 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    min-height: 40px;
+    padding: $space-4;
+    font-size: $font-sm;
+    font-weight: $font-weight-bold;
+    color: white;
+    background-color: $navy;
+    -webkit-border-radius: $border-r-4;
+    -moz-border-radius: $border-r-4;
+    -ms-border-radius: $border-r-4;
+    -o-border-radius: $border-r-4;
+    border-radius: $border-r-4;
+}
+
+.btn-trigger,
+.btn-close {
+    min-width: 36px;
+    background-color: transparent;
+}
+
+.btn-login {
+    color: $white;
+    background-color: $yellow;
+}
+
+.btn-message {
+    color: $light-gray-300;
+    background-color: $light-gray-200;
+}
+
+@include desktop {
+    .btn:hover {
+        @include btnHoverBg($navy);
+    }
+
+    .btn-login:hover {
+        @include btnHoverBg($yellow);
+    }
+
+    .btn-message:hover {
+        @include btnHoverBg($light-gray-200, 1%);
+    }
+}

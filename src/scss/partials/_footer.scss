@@ -1,0 +1,139 @@
+.footer {
+    color: $white;
+    background-color: $black;
+
+    .footer__navs {
+        .section__container {
+            padding-bottom: 0;
+
+            @include tablet {
+                flex-wrap: nowrap;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    .logo {
+        font-size: $font-lg;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+
+        &__img {
+            width: 36px;
+            height: auto;
+            margin-right: $space-4;
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+        }
+    }
+
+    .footer__nav-lists {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-24 0;
+        width: 100%;
+        margin-bottom: $space-32;
+
+        @include tablet {
+            flex-basis: 60%;
+        }
+
+        @include desktop {
+            flex-basis: 65%;
+        }
+
+        li {
+            flex-basis: 50%;
+            margin-bottom: $space-10;
+
+            @include tablet {
+                flex-basis: 24%;
+            }
+
+            @include desktop {
+                a {
+                    opacity: 0.7;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        h3 {
+            margin-bottom: $space-24;
+        }
+    }
+
+    article {
+        width: 100%;
+        padding: $space-40 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+        @include tablet {
+            flex-basis: 40%;
+            border: 0;
+            padding: 0;
+        }
+
+        @include desktop {
+            flex-basis: 35%;
+        }
+
+        h3 {
+            margin: $space-24 0;
+            font-weight: $font-weight-thin;
+        }
+
+        .social {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: $space-24;
+            gap: $space-10;
+
+            @include desktop {
+                &__link {
+                    opacity: 0.7;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .btn-started {
+            width: 150px;
+        }
+    }
+
+    // copyright
+    .copyright {
+        color: rgba(255, 255, 255, 0.7);
+
+        .section__container {
+            text-align: left;
+            align-items: flex-start;
+            font-size: $font-xs;
+            padding: $space-40 $space-20;
+
+            @include tablet {
+                flex-direction: column;
+            }
+
+            a {
+                margin-bottom: $space-24;
+
+                @include tablet {
+                    width: 100%;
+                    padding-top: $space-24;
+                    margin-bottom: $space-10;
+                    border-top: 1px solid rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+    }
+}

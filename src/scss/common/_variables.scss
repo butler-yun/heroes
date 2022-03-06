@@ -1,0 +1,70 @@
+// Colors
+$black: #2b2e2f;
+$navy: #1c4670;
+$sea: #0162ff;
+$white: #ffffff;
+$yellow: #fcd752;
+$light-yellow: #fff7df;
+
+// light
+$light-gray-100: #fafafb;
+$light-gray-200: #f1f1f1;
+$light-gray-300: #83838e;
+
+// dark
+$dark-gray-100: #83838e;
+
+// blue
+$light-blue-100: #f0fafc;
+$light-blue-200: #e1ebfb;
+
+// font-size
+$font-xs: 0.875rem; /* 14px */
+$font-sm: 1rem; /* 16px */
+$font-md: 1.125rem; /* 18px */
+$font-lg: 2rem; /* 32px */
+$font-xl: 2.5rem; /* 40px */
+
+// font-weight
+$font-weight-thin: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 600;
+
+// padding and margin
+$space-4: 4px;
+$space-8: 8px;
+$space-10: 10px;
+$space-12: 12px;
+$space-14: 14px;
+$space-16: 16px;
+$space-18: 18px;
+$space-20: 20px;
+$space-22: 22px;
+$space-24: 24px;
+$space-26: 26px;
+$space-28: 28px;
+$space-30: 30px;
+$space-32: 32px;
+$space-36: 36px;
+$space-40: 40px;
+$space-60: 60px;
+$space-80: 80px;
+
+// border-radius
+$border-r-4: 4px;
+$border-r-10: 10px;
+$border-r-pill: 50%;
+
+// box-shadow
+$box-shadow: 0 16px 16px -16px rgba(0, 0, 0, 0.3);
+$box-shadow2: 0 2px 4px 1px rgba(0, 0, 0, 0.1);
+
+// animation
+$animation-duration: 300ms;
+
+// breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
