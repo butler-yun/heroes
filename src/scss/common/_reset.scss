@@ -4,6 +4,11 @@ nav,
 section,
 article,
 picture,
+form,
+fieldset,
+legend,
+input,
+button,
 ul,
 li,
 div,
@@ -86,8 +91,22 @@ a:hover {
     text-decoration: none;
 }
 
-button[type="button"] {
+button {
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+fieldset {
+    border: none;
+    outline: none;
+}
+
+legend {
+    width: 100%;
 }

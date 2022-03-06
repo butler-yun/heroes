@@ -1,0 +1,51 @@
+.login {
+    .section__container {
+        flex-direction: column;
+        max-width: 480px;
+        height: 100vh;
+
+        .tac {
+            width: 100%;
+            text-align: right;
+        }
+
+        > p {
+            display: flex;
+            gap: $space-4;
+            margin-top: $space-24;
+        }
+
+        .logo {
+            font-size: $font-lg;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+
+            &__img {
+                width: 36px;
+                height: auto;
+                margin-right: $space-4;
+            }
+        }
+
+        h1 {
+            font-size: $font-xs;
+            font-weight: $font-weight-thin;
+        }
+
+        .btn-submit {
+            width: 100%;
+        }
+
+        .forget-password,
+        .signup {
+            color: $navy;
+            text-decoration: underline;
+        }
+
+        .forget-password {
+            display: inline-block;
+            margin: $space-10 0;
+            text-align: right;
+        }
+    }
+}
