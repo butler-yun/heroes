@@ -18,6 +18,10 @@ let resizeTimer = null;
 function showDropdown(elm) {
     elm.classList.add(SHOW_CN);
     currentItem = elm;
+
+    setTimeout(() => {
+        elm.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    }, 300);
 }
 
 function hideDropdown(currentItem) {
