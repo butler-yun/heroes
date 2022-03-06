@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Heroes :: Log in</title>
+        <link rel="icon" type="image/png" sizes="36x36" href="src/images/favicon/favicon_36.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet" />
+        <!-- Start:: CSS -->
+        <link rel="stylesheet" href="src/css/style.css" />
+        <!-- End:: CSS -->
+    </head>
+    <body>
+        <!-- Start:: Contents -->
+        <section class="login">
+            <div class="section__container">
+                <div class="logo">
+                    <img src="src/images/logo/logo.png" alt="logo" class="logo__img" />
+                    Heroes
+                </div>
+                <h1>Log in to Heroes</h1>
+
+                <form id="memberSignup" action="" method="post" accept-charset="utf-8" novalidate="novalidate" aria-labelledby="memberSignup" autocomplete="off">
+                    <div class="names">
+                        <fieldset form="memberSignup">
+                            <legend>
+                                <span>First Name</span>
+                                <input type="text" id="userFirstName" tabindex="1" placeholder="First Name" aria-required="true" maxlength="128" />
+                                <label for="userFirstName">First Name</label>
+                            </legend>
+                            <p class="error-text">First name is required.</p>
+                        </fieldset>
+                        <fieldset form="memberSignup">
+                            <legend>
+                                <span>Last Name</span>
+                                <input type="text" id="userLastName" tabindex="2" placeholder="Last Name" aria-required="true" maxlength="128" />
+                                <label for="userLastName">First Name</label>
+                            </legend>
+                            <p class="error-text">Last name is required.</p>
+                        </fieldset>
+                    </div>
+
+                    <fieldset form="memberSignup">
+                        <legend>
+                            <span>Email</span>
+                            <input type="text" id="userEmail" tabindex="3" placeholder="Email" aria-required="true" maxlength="128" />
+                            <label for="userEmail">Email</label>
+                        </legend>
+                        <p class="error-text">Invalid email.</p>
+                    </fieldset>
+
+                    <fieldset form="memberSignup">
+                        <legend>
+                            <span>Password</span>
+                            <input type="password" id="userPassword" tabindex="4" placeholder="Password" aria-required="true" maxlength="128" />
+                            <label for="userEmail">Password</label>
+                        </legend>
+                        <p class="error-text">Invalid password.</p>
+                    </fieldset>
+
+                    <fieldset form="memberSignup">
+                        <legend>
+                            <span>Company</span>
+                            <input type="text" id="userCompany" tabindex="5" placeholder="Company" aria-required="true" maxlength="128" />
+                            <label for="userCompany">Company</label>
+                        </legend>
+                        <p class="error-text">Company is required</p>
+                    </fieldset>
+
+                    <p class="">
+                        <input type="checkbox" id="agree" name="agree" tabindex="6" />
+                        <label for="agree">I Agree blah blah Heroes</label>
+                    </p>
+
+                    <button type="submit" class="btn btn-submit" tabindex="7">Sing up</button>
+                </form>
+            </div>
+        </section>
+        <!-- End:: Contents -->
+
+        <!-- Start:: Script -->
+        <script src="src/js/form.js"></script>
+        <!-- End:: Script -->
+    </body>
+</html>

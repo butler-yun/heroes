@@ -39,7 +39,7 @@ function chkword(input) {
     }
 
     // password
-    if (input.matches("#userPassword") && leng !== 0) {
+    if (!input.matches("#userEmail") && leng !== 0) {
         input.classList.remove(ERROR_CN);
         currentNameTag.classList.remove(ERROR_CN);
         hideErrorMsg(errorText);

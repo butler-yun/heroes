@@ -47,5 +47,10 @@
             margin: $space-10 0;
             text-align: right;
         }
+
+        .names {
+            display: flex;
+            gap: $space-10;
+        }
     }
 }
