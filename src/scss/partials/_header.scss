@@ -24,6 +24,9 @@
     }
 
     .logo {
+        display: flex;
+        align-items: center;
+        gap: $space-4;
         font-size: $font-lg;
         font-weight: $font-weight-bold;
         text-transform: uppercase;

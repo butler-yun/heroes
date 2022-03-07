@@ -20,8 +20,8 @@ function showDropdown(elm) {
     currentItem = elm;
 
     setTimeout(() => {
-        elm.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-    }, 300);
+        elm.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 400);
 }
 
 function hideDropdown(currentItem) {
