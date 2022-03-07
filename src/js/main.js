@@ -1,6 +1,7 @@
 "use strict";
 
 const addBtn = document.querySelector(".btn-add");
+console.log(addBtn);
 
 const HIDE_CL = "hide";
 const SHOW_CL = "show";
@@ -14,27 +15,20 @@ window.addEventListener("beforeinstallprompt", (event) => {
     addBtn.classList.replace(HIDE_CL, SHOW_CL);
 });
 
-addBtn.addEventListener("click", async () => {
+addBtn.addEventListener("click", (event) => {
     console.log("✔ addBtn-Clicked");
 
-    if (!deferredPrompt) {
-        return;
-    }
-
+    addBtn.classList.replace(SHOW_CL, HIDE_CL);
     deferredPrompt.prompt();
 
-    const result = await deferredPrompt.userChoice;
-    console.log(" userChoice", result);
-
-    if (result === "accepted") {
-        console.log("User accepted");
-    } else {
-        console.log("User dismissed");
-    }
-
-    deferredPrompt = null;
-
-    addBtn.classList.replace(SHOW_CL, HIDE_CL);
+    deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === "accepted") {
+            console.log("User accepted");
+        } else {
+            console.log("User dismissed");
+        }
+        deferredPrompt = null;
+    });
 });
 
 window.addEventListener("appinstalled", (event) => {
