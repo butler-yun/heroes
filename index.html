@@ -9,9 +9,15 @@
         <title>Heroes :: my beloved computer.</title>
         <link rel="icon" type="image/png" sizes="36x36" href="src/images/favicon/favicon_36.png" />
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet" />
+
         <!-- Start:: CSS -->
         <link rel="stylesheet" href="src/css/style.css" />
+        <link rel="stylesheet" href="src/common/css/aos.css" />
         <!-- End:: CSS -->
+
+        <!-- Start:: Script -->
+        <script src="src/common/js/aos.js"></script>
+        <!-- End:: Script -->
     </head>
     <body>
         <!-- Start:: header -->
@@ -506,10 +512,10 @@
             <section class="hero">
                 <div class="section__container">
                     <picture class="hero__img">
-                        <img src="src/images/hero_s_img.png" alt="main image" class="" />
+                        <img src="src/images/hero_s_img.png" alt="main image" class="" data-aos="fade-up" data-aos-duration="800" />
                     </picture>
 
-                    <header>
+                    <header data-aos="fade-up" data-aos-duration="1000">
                         <span class="notice">Lorem ipsum dolor sit amet!</span>
                         <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, maiores!</h1>
                         <p>
@@ -563,7 +569,7 @@
             <!-- Start:: products -->
             <section class="product">
                 <div class="section__container">
-                    <header>
+                    <header data-aos="fade-up" data-aos-duration="1100" data-aos-delay="300">
                         <h2>Lorem ipsum dolor?</h2>
                         <p>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, labore eligendi fugit sit ullam similique atque iste dolorem nisi temporibus rerum aut ut distinctio quas
@@ -574,7 +580,7 @@
                     </header>
 
                     <picture>
-                        <img src="src/images/product_s_img.png" alt="product img" />
+                        <img src="src/images/product_s_img.png" alt="product img" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" />
                     </picture>
                 </div>
             </section>
@@ -584,10 +590,10 @@
             <section class="contact">
                 <div class="section__container">
                     <picture>
-                        <img src="src/images/contact_s_img.png" alt="contact img" />
+                        <img src="src/images/contact_s_img.png" alt="contact img" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" />
                     </picture>
 
-                    <header>
+                    <header data-aos="fade-up" data-aos-duration="1100" data-aos-delay="300">
                         <h2>sit amet consectetur.</h2>
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus laboriosam labore, exercitationem tenetur vel nostrum commodi aperiam reprehenderit officiis ipsam
@@ -947,6 +953,12 @@
         <!-- Start:: script -->
         <script src="src/js/nav.js"></script>
         <script src="src/js/main.js"></script>
+
+        <script>
+            AOS.init({
+                easing: "ease-in-out",
+            });
+        </script>
         <!-- End:: script -->
     </body>
 </html>
