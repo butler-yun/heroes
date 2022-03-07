@@ -1,7 +1,17 @@
 "use strict";
 
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+        .register("../service-worker.js")
+        .then(() => {
+            console.log("Service Worker Registered");
+        })
+        .catch(function (error) {
+            console.log("Falha ao Registrar o Service Worker:", error);
+        });
+}
+
 const addBtn = document.querySelector(".btn-add");
-console.log(addBtn);
 
 const HIDE_CL = "hide";
 const SHOW_CL = "show";
@@ -15,20 +25,27 @@ window.addEventListener("beforeinstallprompt", (event) => {
     addBtn.classList.replace(HIDE_CL, SHOW_CL);
 });
 
-addBtn.addEventListener("click", (event) => {
+addBtn.addEventListener("click", async () => {
     console.log("✔ addBtn-Clicked");
 
-    addBtn.classList.replace(SHOW_CL, HIDE_CL);
+    if (!deferredPrompt) {
+        return;
+    }
+
     deferredPrompt.prompt();
 
-    deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === "accepted") {
-            console.log("User accepted");
-        } else {
-            console.log("User dismissed");
-        }
-        deferredPrompt = null;
-    });
+    const result = await deferredPrompt.userChoice;
+    console.log(" userChoice", result);
+
+    if (result === "accepted") {
+        console.log("User accepted");
+    } else {
+        console.log("User dismissed");
+    }
+
+    deferredPrompt = null;
+
+    addBtn.classList.replace(SHOW_CL, HIDE_CL);
 });
 
 window.addEventListener("appinstalled", (event) => {
